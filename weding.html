@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rajpoot Marriage Bureau Center – Depalpur City</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #8b1e3f;       /* deep maroon */
+      --primary-dark: #64152d;  /* darker maroon */
+      --accent: #f2c14f;        /* soft gold */
+      --bg: #fff8f2;            /* warm light bg */
+      --text: #262626;
+      --muted: #777;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 248, 242, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0.7rem 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    /* “B” style logo: round icon + stacked text */
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 20%, #f9e0a8 0, #f2c14f 35%, #8b1e3f 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+      border: 2px solid #ffffffaa;
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+
+    .logo-main {
+      font-family: "Playfair Display", serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--primary-dark);
+    }
+
+    .logo-sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      position: relative;
+      padding-bottom: 4px;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--primary-dark);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3.5rem 1.2rem 4rem;
+      background: radial-gradient(circle at top left, #ffe4d9 0, #fff8f2 45%, #fdf4e8 100%);
+    }
+
+    .hero-inner {
+      max-width: 1050px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+      gap: 2.4rem;
+      align-items: center;
+    }
+
+    .hero-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.75rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2.4rem;
+      margin-bottom: 0.8rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-title span {
+      color: var(--primary);
+    }
+
+    .hero-urdu {
+      font-size: 0.98rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-subtext {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-location {
+      font-size: 0.86rem;
+      color: var(--muted);
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: #fff;
+      padding: 0.85rem 1.9rem;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.75rem;
+      transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 14px 28px rgba(139, 30, 63, 0.35);
+      text-decoration: none;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 18px 32px rgba(100, 21, 45, 0.5);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--primary-dark);
+      padding: 0.85rem 1.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(139, 30, 63, 0.35);
+      cursor: pointer;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      font-size: 0.73rem;
+      transition: background 0.15s ease, color 0.15s ease, border 0.15s ease;
+      text-decoration: none;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      border-color: var(--primary-dark);
+      color: var(--primary-dark);
+    }
+
+    .hero-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      font-size: 0.85rem;
+    }
+
+    .stat-box {
+      padding: 0.7rem 0.9rem;
+      border-radius: 12px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      box-shadow: 0 12px 26px rgba(0, 0, 0, 0.05);
+      min-width: 120px;
+    }
+
+    .stat-number {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--primary-dark);
+      display: block;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .hero-card-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      font-size: 0.95rem;
+      color: var(--primary-dark);
+    }
+
+    .hero-card-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      margin-bottom: 1.4rem;
+      font-size: 0.85rem;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-list li span {
+      font-size: 1rem;
+      color: var(--accent);
+      margin-top: 1px;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ---------- GENERIC SECTIONS ---------- */
+    section {
+      padding: 4rem 1.2rem;
+    }
+
+    .section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 0.4rem;
+      color: var(--primary-dark);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+    }
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    /* ---------- ABOUT ---------- */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      margin-bottom: 0.9rem;
+      font-size: 0.95rem;
+    }
+
+    .about-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.6rem 1.5rem;
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      font-size: 0.9rem;
+    }
+
+    .about-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-bottom: 0.6rem;
+    }
+
+    .about-line {
+      width: 42px;
+      height: 2px;
+      background: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    /* ---------- SERVICES ---------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.6rem 1.4rem;
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      font-size: 0.9rem;
+    }
+
+    .service-title {
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--primary-dark);
+    }
+
+    .service-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 0.9rem;
+    }
+
+    .service-list {
+      list-style: none;
+      padding-left: 0;
+      font-size: 0.85rem;
+    }
+
+    .service-list li {
+      margin-bottom: 0.4rem;
+    }
+
+    /* ---------- PROCESS ---------- */
+    .process-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .process-steps {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.3rem;
+      font-size: 0.88rem;
+    }
+
+    .process-step {
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.4rem 1.3rem;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .step-number {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+
+    .step-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: var(--primary-dark);
+    }
+
+    /* ---------- SUCCESS GALLERY ---------- */
+    .success-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.4rem;
+    }
+
+    .success-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 1rem 1rem 1.3rem;
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      font-size: 0.86rem;
+    }
+
+    .success-thumb {
+      width: 100%;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 0.7rem;
+      aspect-ratio: 4 / 3;
+      background: #f6e9df;
+    }
+
+    .success-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .success-name {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .success-meta {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .success-btn {
+      display: inline-block;
+      margin-top: 0.3rem;
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(139, 30, 63, 0.35);
+      background: #fff;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: var(--primary-dark);
+    }
+
+    .success-btn:hover {
+      background: #fff7f2;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+      padding: 1rem;
+    }
+
+    .modal-content {
+      max-width: 480px;
+      width: 100%;
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.6rem 1.5rem 1.4rem;
+      box-shadow: 0 22px 44px rgba(0, 0, 0, 0.35);
+      position: relative;
+      font-size: 0.9rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 14px;
+      font-size: 1.3rem;
+      cursor: pointer;
+      color: var(--muted);
+    }
+
+    .modal-title {
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .modal-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .modal-story {
+      font-size: 0.9rem;
+    }
+
+    /* ---------- CONTACT / REGISTER ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.7rem 0.85rem;
+      border-radius: 10px;
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      background: #fffdf9;
+      transition: border 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(139, 30, 63, 0.25);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.6rem;
+    }
+
+    .form-success {
+      font-size: 0.85rem;
+      color: #2f7a3b;
+      margin-top: 0.8rem;
+      display: none;
+    }
+
+    .contact-info {
+      font-size: 0.9rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 0.7rem;
+    }
+
+    .info-label {
+      font-weight: 600;
+      color: var(--primary-dark);
+    }
+
+    .info-small {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1rem;
+      padding: 0.75rem 1.4rem;
+      border-radius: 999px;
+      background: #25d366;
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      text-decoration: none;
+      box-shadow: 0 14px 26px rgba(37, 211, 102, 0.35);
+    }
+
+    .whatsapp-btn span.icon {
+      font-size: 1rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      padding: 2rem 1.2rem 2.3rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .footer-heart {
+      color: var(--accent);
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 2.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        justify-content: flex-start;
+      }
+
+      .about-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .logo-main {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-wrap">
+        <div class="logo-icon">R</div>
+        <div class="logo-text">
+          <div class="logo-main">Rajpoot Marriage Bureau Center</div>
+          <div class="logo-sub">Trusted by Families • Since 2025</div>
+        </div>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#success">Success</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">Premium Matchmaking • Halal & Family-Oriented</div>
+        <h1 class="hero-title">
+          <span>Rajpoot</span> Marriage Bureau Center
+        </h1>
+        <p class="hero-urdu">
+          “Rishta sirf ملایا نہیں جاتا، نبھانے کے لیے صحیح خاندان چُنا جاتا ہے۔”
+        </p>
+        <p class="hero-subtext">
+          We connect serious families looking for **halal, decent, family-approved rishtay** for
+          boys and girls in Pakistan and overseas (UK, UAE, Saudi, USA & more).
+        </p>
+        <p class="hero-location">
+          Based in <strong>Depalpur City, Punjab</strong> – serving families across Pakistan & overseas.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-primary">Register Your Profile</a>
+          <a href="#services" class="btn-outline">View Services</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-box">
+            <span class="stat-number">350+</span>
+            <span class="stat-label">Successful Proposals (Alhamdulillah)</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">Years Combined Experience</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-number">Global</span>
+            <span class="stat-label">Pakistani & Overseas Clients</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-title">Quick Eligibility Check</div>
+        <div class="hero-card-sub">
+          Share basic details — our team will contact you with suitable rishtay InshaAllah.
+        </div>
+        <ul class="hero-list">
+          <li><span>•</span> Family-oriented serious proposals only</li>
+          <li><span>•</span> Profiles verified by our team before sharing</li>
+          <li><span>•</span> Confidential & respectful process</li>
+        </ul>
+        <div class="hero-note">
+          Call / WhatsApp for urgent cases:
+          <strong>+92 301 739628</strong><br />
+          (Timing: 11:00am – 8:00pm Pakistan time)
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <h2 class="section-title">About <span class="highlight">Rajpoot</span> Marriage Bureau</h2>
+      <p class="section-subtitle">
+        A trusted bridge between families — with privacy, respect, and Islamic values.
+      </p>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Rajpoot Marriage Bureau Center is a **family-run bureau** that helps parents and
+            individuals find suitable life partners with **serious intentions only**.
+          </p>
+          <p>
+            We work with **educated, decent families** from Pakistan and overseas, focusing on
+            compatibility in **values, deen, education, and family background**.
+          </p>
+          <p>
+            ہمارا مقصد صرف شادی کروانا نہیں، بلکہ ایسے دو خاندان ملانا ہے جو ایک دوسرے کی
+            عزت اور اقدار کو سمجھیں۔ ہم ہر پروفائل کو احتیاط سے vet کرتے ہیں اور صرف
+            سنجیدہ، صاف نیت اور باپردہ environment میں بات چیت کرواتے ہیں۔
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-label">Why Families Trust Us</div>
+          <div class="about-line"></div>
+          <p>✔ Confidential handling of all profiles</p>
+          <p>✔ Islamic & cultural values respected</p>
+          <p>✔ Detailed family & background discussion</p>
+          <p>✔ No public listing, no random sharing of photos</p>
+          <p>✔ Dedicated rishta coordinator for every serious case</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-inner">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        Different packages for different needs — from basic matchmaking to fully guided proposals.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-tag">Basic</div>
+          <div class="service-title">Standard Matchmaking</div>
+          <p>
+            For families who want shortlisted, verified profiles according to basic preferences.
+          </p>
+          <ul class="service-list">
+            <li>• Profile registration & basic consultation</li>
+            <li>• Shortlisted matches via phone / WhatsApp</li>
+            <li>• Age, city, education & sect filters</li>
+            <li>• 100% confidential communication</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-tag">Popular</div>
+          <div class="service-title">Premium Rishta Service</div>
+          <p>
+            For time-sensitive cases (overseas, professionals, second marriage, etc.)
+          </p>
+          <ul class="service-list">
+            <li>• Detailed profile building & preferences</li>
+            <li>• Dedicated rishta coordinator</li>
+            <li>• Priority matching & weekly follow-up</li>
+            <li>• Guidance for first meeting & family introduction</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-tag">Exclusive</div>
+          <div class="service-title">Confidential Elite Matches</div>
+          <p>
+            For families requiring full privacy, limited sharing, and high standards.
+          </p>
+          <ul class="service-list">
+            <li>• Limited & personally vetted profiles only</li>
+            <li>• No photos shared without consent</li>
+            <li>• Direct coordination with parents/guardians</li>
+            <li>• Custom process as per family requirement</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="section-inner">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">
+        Simple, respectful, and guided — from registration to proposal.
+      </p>
+
+      <div class="process-wrap">
+        <ul class="process-steps">
+          <li class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-title">Share Your Details</div>
+            <p>
+              Fill the online form or WhatsApp us your basic information: age, city, education,
+              family background & preferences.
+            </p>
+          </li>
+          <li class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-title">Profile Review & Call</div>
+            <p>
+              Our team reviews your profile and may call you (or your parents) for clarification
+              and verification.
+            </p>
+          </li>
+          <li class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-title">Shortlisted Rishtay</div>
+            <p>
+              We share suitable proposals according to your preferences. You can accept, decline,
+              or request more details.
+            </p>
+          </li>
+          <li class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-title">Family Introduction</div>
+            <p>
+              When both sides agree, we help arrange a formal meeting/online interaction in a
+              respectful and halal manner.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS GALLERY -->
+  <section id="success">
+    <div class="section-inner">
+      <h2 class="section-title">Success Gallery</h2>
+      <p class="section-subtitle">
+        A few examples of happy couples whose rishta was completed through Rajpoot Marriage Bureau Center.
+      </p>
+
+      <div class="success-grid">
+        <!-- Example 1 -->
+        <div class="success-card">
+          <div class="success-thumb">
+            <!-- Placeholder image, later apni real couple pic laga sakte ho -->
+            <img src="https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Couple 1" />
+          </div>
+          <div class="success-name">Ahmed & Ayesha</div>
+          <div class="success-meta">Married 2024 · Lahore & Dubai</div>
+          <button
+            class="success-btn"
+            data-couple="Ahmed & Ayesha"
+            data-year="2024"
+            data-city="Lahore, Pakistan & Dubai, UAE"
+            data-occupation="Groom: Software Engineer · Bride: Doctor"
+            data-story="Family introduced through our Premium Service. Both families wanted a balance of deen and dunya, similar education and overseas settlement. After a few guided meetings, Nikah was finalized Alhamdulillah within 3 months."
+          >
+            View Details
+          </button>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="success-card">
+          <div class="success-thumb">
+            <img src="https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Couple 2" />
+          </div>
+          <div class="success-name">Bilal & Fatima</div>
+          <div class="success-meta">Married 2023 · Depalpur & Karachi</div>
+          <button
+            class="success-btn"
+            data-couple="Bilal & Fatima"
+            data-year="2023"
+            data-city="Depalpur City & Karachi, Pakistan"
+            data-occupation="Groom: Business Owner · Bride: Teacher"
+            data-story="Both families were looking for simple, religious-minded rishta with strong family values. Profiles matched on lifestyle, family background and expectations. Today they are happily married and families stay in touch with us."
+          >
+            View Details
+          </button>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="success-card">
+          <div class="success-thumb">
+            <img src="https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Couple 3" />
+          </div>
+          <div class="success-name">Usman & Hira</div>
+          <div class="success-meta">Married 2022 · Saudi & Islamabad</div>
+          <button
+            class="success-btn"
+            data-couple="Usman & Hira"
+            data-year="2022"
+            data-city="Riyadh, Saudi Arabia & Islamabad, Pakistan"
+            data-occupation="Groom: Engineer · Bride: Accounts Professional"
+            data-story="Overseas groom with limited time in Pakistan needed a quick but serious process. We handled profile verification, shared shortlisted proposals and scheduled family meetings in a short trip window. Nikah and rukhsati were finalized respectfully."
+          >
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <p class="section-subtitle" style="margin-top:2rem;font-size:0.85rem;">
+        Note: Above details are sample placeholders. You can replace images, names and stories with actual couples once rishtay complete ho jayein.
+      </p>
+    </div>
+  </section>
+
+  <!-- SUCCESS MODAL -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-content">
+      <div class="modal-close" id="modalClose">&times;</div>
+      <div class="modal-title" id="modalCouple">Couple Name</div>
+      <div class="modal-meta" id="modalMeta">Year • City</div>
+      <div class="modal-story" id="modalStory">
+        Story text will come here.
+      </div>
+      <p class="info-small" style="margin-top:0.9rem;">
+        For privacy, detailed personal data is never shared publicly. This section is only for short, consented success highlights.
+      </p>
+    </div>
+  </div>
+
+  <!-- CONTACT / REGISTER -->
+  <section id="contact">
+    <div class="section-inner">
+      <h2 class="section-title">Register Your Profile</h2>
+      <p class="section-subtitle">
+        Fill the form below — our team will contact you on WhatsApp / Call with next steps.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <form id="registerForm">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age *</label>
+              <input type="number" id="age" name="age" min="18" max="70" required />
+            </div>
+
+            <div class="form-group">
+              <label for="gender">Profile Type *</label>
+              <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="female">Female (Bride)</option>
+                <option value="male">Male (Groom)</option>
+                <option value="parent">Parent / Guardian</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="city">City / Country *</label>
+              <input type="text" id="city" name="city" required placeholder="e.g. Depalpur City, Pakistan / Dubai, UAE" />
+            </div>
+
+            <div class="form-group">
+              <label for="education">Education / Profession</label>
+              <input type="text" id="education" name="education" placeholder="e.g. MBBS doctor, Engineer, Business" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">WhatsApp Number *</label>
+              <input type="tel" id="phone" name="phone" required placeholder="+92..." />
+            </div>
+
+            <div class="form-group">
+              <label for="details">Family & Preferences (Brief) *</label>
+              <textarea id="details" name="details" required placeholder="Family background, religious level, and what kind of proposal you are looking for."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary">Submit Details</button>
+            <div class="form-note">
+              Note: This form is a front-end demo. Later you can connect it with your email, Google Sheet, or backend (PHP / Firebase etc.) to store real data.
+            </div>
+            <div class="form-success" id="formSuccess">
+              Thank you! Your details have been submitted. Our team will contact you soon InshaAllah. 💌
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-info">
+          <p>
+            <span class="info-label">Owner / Contact Person:</span><br />
+            <strong>Rao Sajid Hussain</strong><br />
+            <span class="info-small">Founder & Director – Rajpoot Marriage Bureau Center</span>
+          </p>
+
+          <p>
+            <span class="info-label">Office Location:</span><br />
+            Depalpur City, Punjab, Pakistan<br />
+            <span class="info-small">(You can add exact plaza / street name here later.)</span>
+          </p>
+
+          <p>
+            <span class="info-label">Timings:</span><br />
+            Monday – Sunday, 11:00am to 8:00pm (Pakistan Time)
+          </p>
+
+          <p>
+            <span class="info-label">Phone / WhatsApp:</span><br />
+            +92 301 739628<br />
+            <span class="info-small">(Same number is used for WhatsApp button below.)</span>
+          </p>
+
+          <p>
+            <span class="info-label">Email:</span><br />
+            info@rajpootmarriagebureau.com
+          </p>
+
+          <a
+            href="https://wa.me/92301739628?text=Assalamualaikum%2C+I+want+to+register+for+marriage+proposal."
+            class="whatsapp-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="icon">💬</span>
+            <span>WhatsApp Us Now</span>
+          </a>
+
+          <p class="info-small" style="margin-top:1rem;">
+            Privacy Promise: We never publicly post your data. Every profile is handled with respect, confidentiality and family values.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> Rajpoot Marriage Bureau Center – Depalpur City<br />
+    Owned & Managed by <strong>Rao Sajid Hussain</strong><br />
+    Made with <span class="footer-heart">♥</span> for families.
+  </footer>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+      anchor.addEventListener("click", function (e) {
+        const targetId = this.getAttribute("href");
+        if (targetId.length > 1) {
+          e.preventDefault();
+          const targetElem = document.querySelector(targetId);
+          if (targetElem) {
+            window.scrollTo({
+              top: targetElem.offsetTop - 70,
+              behavior: "smooth",
+            });
+          }
+        }
+      });
+    });
+
+    // Year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Simple form handling (front-end only)
+    const registerForm = document.getElementById("registerForm");
+    const formSuccess = document.getElementById("formSuccess");
+
+    registerForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      formSuccess.style.display = "block";
+      setTimeout(function () {
+        registerForm.reset();
+      }, 600);
+    });
+
+    // Success modal handling
+    const modal = document.getElementById("successModal");
+    const modalClose = document.getElementById("modalClose");
+    const modalCouple = document.getElementById("modalCouple");
+    const modalMeta = document.getElementById("modalMeta");
+    const modalStory = document.getElementById("modalStory");
+
+    document.querySelectorAll(".success-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const couple = this.getAttribute("data-couple");
+        const year = this.getAttribute("data-year");
+        const city = this.getAttribute("data-city");
+        const occupation = this.getAttribute("data-occupation");
+        const story = this.getAttribute("data-story");
+
+        modalCouple.textContent = couple;
+        modalMeta.textContent = year + " • " + city + " • " + occupation;
+        modalStory.textContent = story;
+
+        modal.style.display = "flex";
+      });
+    });
+
+    modalClose.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", function (e) {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
+</body>
+</html>
