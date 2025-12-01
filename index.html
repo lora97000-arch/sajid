@@ -724,6 +724,136 @@
         font-size: 1rem;
       }
     }
+   
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;600&display=swap');
+
+  #policy-and-form {
+    direction: rtl;
+    font-family: "Noto Nastaliq Urdu", system-ui, sans-serif;
+    background: #fffaf5;
+    padding: 2rem 1rem;
+    text-align: right;
+  }
+  #policy-and-form h2,
+  #policy-and-form h3 {
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+  #policy-and-form h2 {
+    color: #b30c0c;
+    font-size: 1.6rem;
+  }
+  #policy-and-form h3 {
+    font-size: 1.2rem;
+  }
+  .policy-box {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.8rem 0.7rem;
+    background: #fffdf5;
+    max-height: 260px;
+    overflow-y: auto;
+    margin-bottom: 0.7rem;
+    font-size: 0.95rem;
+  }
+  .policy-agree {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.96rem;
+  }
+  .policy-agree input {
+    width: 18px;
+    height: 18px;
+  }
+  .policy-note {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: 0.3rem;
+  }
+  #agreement-section {
+    margin-top: 1.4rem;
+    display: none; /* checkbox se open hoga */
+  }
+  #agreement-section .form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 0.7rem 1rem;
+  }
+  #agreement-section .field-group {
+    margin-bottom: 0.5rem;
+  }
+  #agreement-section label {
+    display: block;
+    margin-bottom: 0.2rem;
+    font-size: 0.9rem;
+  }
+  #agreement-section input,
+  #agreement-section textarea {
+    width: 100%;
+    padding: 0.4rem 0.55rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    direction: rtl;
+  }
+  #agreement-section textarea {
+    min-height: 70px;
+    resize: vertical;
+  }
+  #agreement-section .btn-row {
+    margin-top: 0.9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  #agreement-section button {
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.8rem;
+  }
+  #submitRishta {
+    background: #128c7e;
+    color: #fff;
+  }
+  #printForm {
+    background: #fff;
+    color: #333;
+    border: 1px solid #aaa;
+  }
+  #formSuccess {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: #0a7a1f;
+    display: none;
+  }
+
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+    #policy-and-form, #policy-and-form * {
+      visibility: visible;
+    }
+    #policy-and-form {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      padding: 1rem;
+      background: #ffffff;
+    }
+    /* buttons etc hide */
+    #submitRishta,
+    #printForm,
+    #policyAgreeWrapper {
+      display: none !important;
+    }
+  }
+
   </style>
 </head>
 <body>
@@ -1222,4 +1352,5 @@
   </script>
 </body>
 </html>
+
 
